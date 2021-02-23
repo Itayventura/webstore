@@ -1,0 +1,11 @@
+[{
+  "name": "Blue T-shirt",
+  "categoryId": 1,
+  "quantity": 10
+},
+  {
+    "name": "White T-shirt",
+    "categoryId": 1,
+    "quantity": 10
+  }
+]

@@ -31,7 +31,7 @@ public class CategoryServiceApplication implements CommandLineRunner {
 
 	private void createCategories() {
 		List<Category> categories = new ArrayList<>(Arrays.asList(
-				new Category("Cloths"),
+				new Category("Clothes"),
 				new Category("Sport"),
 				new Category("Office Tools"),
 				new Category("Kitchen"),

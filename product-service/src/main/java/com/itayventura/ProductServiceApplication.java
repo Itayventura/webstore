@@ -45,8 +45,30 @@ public class ProductServiceApplication implements CommandLineRunner {
 	}
 
 	private List<Product> getProducts() {
-		return new ArrayList<>(Arrays.asList(new Product("Football",2L,30L),
-				new Product("Basketball",2L,30L)));
+		return new ArrayList<>(Arrays.asList(
+				new Product("Football",2L,30L),
+				new Product("Basketball",2L,30L),
+				new Product("Pen",3L,30L),
+				new Product("Pencil",3L,30L),
+				new Product("Rubber",3L,30L),
+				new Product("Notebook",3L,30L),
+				new Product("Knife",4L,30L),
+				new Product("Fork",4L,30L),
+				new Product("Spoon",4L,30L),
+				new Product("Plate",4L,30L),
+				new Product("Wine Glass",4L,30L),
+				new Product("Beer Glass",4L,30L),
+				new Product("Coffee Glass",4L,30L),
+				new Product("Shot Glass",4L,30L),
+				new Product("Marvel Hasbro",5L,30L),
+				new Product("Spy Ninjas",5L,30L),
+				new Product("Bluey Family Home",5L,30L),
+				new Product("Funko Pop",5L,30L),
+				new Product("Sandbox Vehicle",5L,30L),
+				new Product("Toy Story Woody",5L,30L),
+				new Product("DC Comics Superman",5L,30L),
+				new Product("Spider Man Hasbro Marvel",5L,30L)
+				));
 	}
 
 	private List<Product> getProductsFromJson(String filePath) throws IOException {

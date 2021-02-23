@@ -1,11 +1,13 @@
 [{
   "name": "Blue T-shirt",
   "categoryId": 1,
-  "quantity": 10
+  "quantity": 10,
+  "price": 15.00
 },
   {
     "name": "White T-shirt",
     "categoryId": 1,
-    "quantity": 10
+    "quantity": 10,
+    "price": 10.0
   }
 ]

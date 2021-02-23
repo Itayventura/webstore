@@ -19,13 +19,26 @@ public class Product {
     @Column
     private Long quantity;
 
-    public Product(String name, Long categoryId, Long quantity){
+    @Column
+    private Double price;
+
+    public Product(String name, Long categoryId, Long quantity, Double price){
         this.name = name;
         this.categoryId = categoryId;
         this.quantity = quantity;
+        this.price = price;
+    }
+    protected Product(){}
+
+
+    public Double getPrice() {
+        return price;
     }
 
-    protected Product(){}
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
 
     public Long getId() {
         return id;

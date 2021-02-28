@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.itayventura.domain.Product;
 import com.itayventura.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -26,6 +27,9 @@ import static com.fasterxml.jackson.annotation.PropertyAccessor.FIELD;
 public class ProductServiceApplication implements CommandLineRunner {
 	private final ProductRepository repository;
 
+	@Value("${path.to.products.json}")
+	private String pathToJson;
+
 	@Autowired
 	public ProductServiceApplication(ProductRepository repository){
 		this.repository = repository;
@@ -38,9 +42,8 @@ public class ProductServiceApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		this.repository.saveAll(getProducts());
-		Path filePath = Paths.get(System.getProperty("user.dir"), "src", "main", "resources", "products.json");
-		this.repository.saveAll(getProductsFromJson( filePath.toString()));
-
+		this.repository.saveAll(getProductsFromJson(pathToJson));
+		System.out.println(pathToJson);
 	}
 
 	private List<Product> getProducts() {
